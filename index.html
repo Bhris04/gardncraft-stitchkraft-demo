@@ -1,78 +1,114 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f3efe5">
-  <meta name="description" content="An unofficial website concept for GardNcraft & StitchKraft, a Long Beach shop bringing plants and handmade embroidered goods together.">
-  <title>GardNcraft & StitchKraft — A little green, a little handmade</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
-  <style>
-    :root{--cream:#f3efe5;--paper:#fffdf7;--ink:#25392e;--green:#315b42;--sage:#829477;--moss:#a1aa85;--clay:#b96747;--ochre:#d1aa67;--line:#dcd8c9;--muted:#6e786c;--serif:'Fraunces',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.6 var(--sans)}a{color:inherit}button,input,select,textarea{font:inherit}.demo-bar{background:#283c30;color:#f7f3e9;text-align:center;padding:8px 16px;font-size:11px;letter-spacing:.13em;text-transform:uppercase}.demo-bar b{color:#e0bd7c}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}.nav{height:83px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px;text-decoration:none}.logo{width:40px;height:40px;border:1px solid var(--green);border-radius:50%;display:grid;place-items:center;color:var(--green);font:500 21px var(--serif);position:relative}.logo:after{content:'✳';position:absolute;font:12px var(--sans);right:-5px;top:-3px;color:var(--clay)}.brandname{font:600 20px/1.08 var(--serif);letter-spacing:-.03em}.brandname small{display:block;font:500 9px var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:5px}.navlinks{display:flex;align-items:center;gap:27px}.navlinks a{text-decoration:none;font-size:13px;font-weight:600}.navlinks a:hover{color:var(--clay)}.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;background:var(--green);color:white;text-decoration:none;padding:13px 19px;font-size:13px;font-weight:700;transition:transform .2s,background .2s;cursor:pointer}.button:hover{background:#254a34;transform:translateY(-2px)}.button.ghost{background:transparent;color:var(--green);border:1px solid var(--green)}.button.ghost:hover{background:var(--green);color:white}.hero{min-height:580px;display:grid;grid-template-columns:1.02fr .98fr;gap:58px;align-items:center;padding:60px 0 68px}.eyebrow{display:flex;align-items:center;gap:10px;color:var(--clay);font-size:11px;letter-spacing:.17em;text-transform:uppercase;font-weight:700}.eyebrow:before{content:'';width:27px;height:1px;background:currentColor}.hero h1{font:600 clamp(51px,6vw,80px)/.98 var(--serif);letter-spacing:-.055em;margin:22px 0 20px;max-width:580px}.hero h1 em{font-weight:500;color:var(--clay)}.hero-copy{color:#566759;max-width:490px;font-size:17px;line-height:1.8}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.hero-note{margin-top:27px;color:var(--muted);font-size:11px;max-width:400px}.hero-art{height:420px;position:relative;overflow:hidden;border-radius:48% 48% 16px 16px;background:#dfe3d1}.sun{position:absolute;width:195px;height:195px;border-radius:50%;background:#e4bd77;right:12%;top:7%;opacity:.9}.hill{position:absolute;width:120%;height:55%;bottom:-18%;left:-10%;background:#879573;border-radius:50% 50% 0 0;transform:rotate(-5deg)}.hill.back{bottom:-9%;left:-14%;background:#a9af8b;transform:rotate(8deg)}.pot{position:absolute;bottom:8%;left:39%;width:141px;height:137px;border-radius:15px 15px 50px 50px;background:linear-gradient(90deg,#a9583e,#c57a56 56%,#a9583e);z-index:3;box-shadow:0 18px 24px #26372c2a}.pot:before{content:'';position:absolute;top:0;left:-7px;width:155px;height:23px;border-radius:9px;background:#d28a62}.soil{position:absolute;top:8px;left:4px;width:133px;height:15px;border-radius:50%;background:#594b37}.stem{position:absolute;z-index:2;bottom:28%;left:51%;width:4px;height:220px;background:#446444;border-radius:5px;transform:rotate(-4deg);transform-origin:bottom}.leaf{position:absolute;width:77px;height:35px;background:linear-gradient(135deg,#65805b,#3f6745);border-radius:100% 0 100% 0;z-index:4;box-shadow:inset -2px -2px 0 #ffffff14}.leaf:after{content:'';position:absolute;width:55px;height:1px;background:#c7cfaa88;left:11px;top:19px;transform:rotate(-16deg)}.leaf.l1{bottom:66%;left:31%;transform:rotate(15deg)}.leaf.l2{bottom:74%;left:51%;transform:scaleX(-1) rotate(18deg)}.leaf.l3{bottom:84%;left:33%;transform:rotate(-17deg);width:68px}.leaf.l4{bottom:90%;left:49%;transform:scaleX(-1) rotate(-20deg);width:62px}.leaf.l5{bottom:54%;left:50%;transform:scaleX(-1) rotate(-9deg);width:69px}.spark{position:absolute;color:var(--clay);font:28px var(--serif);z-index:5}.spark.a{left:13%;top:20%}.spark.b{right:8%;top:44%;font-size:19px}.stitch{position:absolute;z-index:3;background:#f6e9cc;border:1px dashed #a76243;right:7%;bottom:10%;padding:17px 21px 13px;transform:rotate(6deg);box-shadow:0 11px 20px #26372c18}.stitch span{display:block;text-align:center;color:#a95f43;font:500 23px var(--serif)}.stitch small{display:block;text-align:center;text-transform:uppercase;letter-spacing:.12em;font-size:8px;color:#727461;margin-top:3px}.hero-cap{position:absolute;bottom:15px;left:19px;color:#f8f3e8;font-size:10px;letter-spacing:.1em;text-transform:uppercase;z-index:5}.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;color:#63705e;font:500 13px var(--serif);text-align:center;letter-spacing:.02em}.ticker span{padding:0 17px;color:var(--clay)}.section{padding:87px 0}.section.paper{background:var(--paper)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:34px}.section h2{font:600 clamp(36px,4vw,52px)/1.06 var(--serif);letter-spacing:-.045em;margin:11px 0 0}.intro{max-width:440px;color:var(--muted);margin:0;font-size:14px}.offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.offer{border-radius:17px;padding:31px;min-height:295px;position:relative;overflow:hidden}.offer.plants{background:#e8eadf}.offer.stitch{background:#f1e2d5}.offer .tag{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--clay);font-weight:700}.offer h3{font:600 32px var(--serif);margin:19px 0 10px}.offer p{max-width:390px;color:#5e6a5c;font-size:14px}.offer .textlink{display:inline-flex;gap:7px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px;font-size:12px;font-weight:700;color:var(--green);margin-top:10px}.plant-still{position:absolute;right:8%;bottom:-17px;width:140px;height:204px;opacity:.9}.still-pot{position:absolute;bottom:0;left:39px;width:76px;height:72px;border-radius:8px 8px 28px 28px;background:#bc714f}.still-pot:before{content:'';position:absolute;width:83px;height:12px;left:-4px;top:0;border-radius:6px;background:#d08a64}.still-stem{position:absolute;bottom:53px;left:75px;height:140px;width:3px;background:#55704a;transform:rotate(7deg)}.still-leaf{position:absolute;width:59px;height:27px;border-radius:100% 0 100% 0;background:#67825f;z-index:2}.still-leaf.a{bottom:125px;left:24px;transform:rotate(10deg)}.still-leaf.b{bottom:144px;left:75px;transform:scaleX(-1) rotate(13deg)}.still-leaf.c{bottom:93px;left:74px;transform:scaleX(-1) rotate(-10deg)}.stitch-illustration{position:absolute;right:8%;bottom:17px;width:133px;height:104px;border-radius:8px;background:#fcf7eb;box-shadow:0 12px 20px #69452a19;transform:rotate(7deg);display:grid;place-items:center;border:1px solid #e6d2bd}.stitch-illustration svg{width:78px;height:76px}.feature-row{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center}.guide-panel{background:#e4e4d8;border-radius:18px;padding:31px;position:relative;min-height:366px;overflow:hidden}.guide-panel:before{content:'';position:absolute;width:260px;height:260px;border-radius:50%;background:#c8cbb6;left:-99px;bottom:-124px}.guide-top{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}.guide-top b{color:var(--clay)}.guide-panel h3{font:600 31px/1.1 var(--serif);max-width:260px;margin:34px 0 19px}.choice{display:flex;align-items:center;gap:12px;border:1px solid #b7bdaa;border-radius:11px;background:#f7f6ee;padding:12px 14px;margin:9px 0;text-align:left;width:100%;color:var(--ink);cursor:pointer;position:relative;z-index:1}.choice:hover,.choice:focus-visible{border-color:var(--green);outline:2px solid #315b4230}.choice .dot{width:24px;height:24px;border-radius:50%;background:#e1e7d7;display:grid;place-items:center;color:var(--green);font-size:11px}.choice span:nth-child(2){font-weight:600;font-size:13px}.choice small{display:block;font-weight:400;color:var(--muted);font-size:11px}.answer{position:relative;z-index:1;margin-top:17px;padding:13px 15px;background:#fffdf7;border-left:2px solid var(--clay);font-size:12px;color:#576554;display:none}.answer.visible{display:block}.feature-copy p{color:var(--muted);font-size:15px;line-height:1.85;max-width:480px}.feature-copy .eyebrow{margin-bottom:14px}.care-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:29px}.care-card{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:19px}.care-card .icon{font-size:20px}.care-card h4{font:600 19px var(--serif);margin:10px 0 5px}.care-card p{font-size:11px;line-height:1.6;margin:0}.seasonal{background:var(--green);color:#f8f3e8;padding:72px 0}.seasonal-grid{display:grid;grid-template-columns:1fr .95fr;gap:60px;align-items:center}.seasonal .eyebrow{color:#e1bd7e}.seasonal .eyebrow:before{background:#e1bd7e}.seasonal h2{font:600 clamp(37px,4vw,51px)/1.06 var(--serif);letter-spacing:-.04em;margin:16px 0}.seasonal p{color:#d4decf;max-width:480px;font-size:14px}.seasons{display:grid;grid-template-columns:1fr 1fr;gap:10px}.season-card{border:1px solid #ffffff39;border-radius:12px;padding:18px 19px;background:#ffffff08;min-height:100px}.season-card b{display:block;font:500 20px var(--serif);color:#e2c480}.season-card span{font-size:11px;color:#d8e0d5}.community{display:grid;grid-template-columns:1fr 1fr;gap:18px}.community-card{border-radius:15px;padding:29px;background:#e7e3d5;min-height:220px}.community-card:nth-child(2){background:#eee2d6}.community-card .num{font:italic 17px var(--serif);color:var(--clay)}.community-card h3{font:600 26px var(--serif);margin:17px 0 8px}.community-card p{font-size:13px;color:var(--muted);max-width:450px}.visit{padding:77px 0 64px;background:#e1e4d8}.visit-grid{display:grid;grid-template-columns:1fr .85fr;gap:56px;align-items:center}.visit h2{font:600 45px/1.05 var(--serif);letter-spacing:-.04em;margin:13px 0}.visit p{max-width:460px;color:#5d6c5c;font-size:14px}.address{background:#fffdf7;border:1px solid var(--line);border-radius:14px;padding:25px}.address .label{font-size:10px;color:var(--clay);letter-spacing:.16em;text-transform:uppercase;font-weight:700}.address strong{font:600 23px var(--serif);display:block;margin:10px 0 5px}.address p{margin:0 0 16px;font-size:12px}.address small{display:block;color:var(--muted);font-size:10px;margin-top:14px}.footer{padding:27px 0 35px;display:flex;justify-content:space-between;gap:24px;align-items:center;color:var(--muted);font-size:11px}.footer-links{display:flex;gap:19px}.footer a{text-decoration:none}.mobile-toggle{display:none}
-    @media(max-width:760px){.wrap{width:min(100% - 34px,560px)}.nav{height:73px}.navlinks{gap:14px}.navlinks a:not(.button){display:none}.brandname{font-size:18px}.hero{grid-template-columns:1fr;gap:25px;padding:44px 0 48px;min-height:0}.hero h1{font-size:60px}.hero-art{height:350px;max-width:470px;width:100%;margin:auto}.sun{width:150px;height:150px}.section{padding:61px 0}.section-head{display:block}.intro{margin-top:13px}.offer-grid,.feature-row,.seasonal-grid,.visit-grid{grid-template-columns:1fr;gap:25px}.offer{min-height:265px;padding:25px}.plant-still{right:4%;transform:scale(.85);transform-origin:bottom right}.stitch-illustration{right:4%;transform:scale(.84) rotate(7deg);transform-origin:bottom right}.feature-row{gap:35px}.guide-panel{min-height:350px}.care-cards{grid-template-columns:1fr}.care-card{padding:17px}.seasonal{padding:60px 0}.seasonal-grid{gap:22px}.community{grid-template-columns:1fr}.visit h2{font-size:39px}.footer{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-  </style>
-</head>
-<body>
-  <div class="demo-bar"><b>Concept preview</b> · Unofficial demo — details for owner review</div>
-  <div class="wrap">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="#home"><span class="logo" aria-hidden="true">G</span><span class="brandname">GardNcraft & StitchKraft<small>Plants · handmade · home</small></span></a>
-      <div class="navlinks"><a href="#discover">Discover</a><a href="#plant-notes">Plant notes</a><a href="#community">Community</a><a class="button" href="#visit">Find the shop <span aria-hidden="true">↗</span></a></div>
-    </nav>
-    <main>
-      <section class="hero" id="home">
-        <div>
-          <div class="eyebrow">A little green, a little handmade</div>
-          <h1>Grow something.<br><em>Give something</em><br>made with care.</h1>
-          <p class="hero-copy">Meet a Long Beach shop where leafy finds and thoughtful stitched gifts share a sunny little corner.</p>
-          <div class="actions"><a class="button" href="#discover">Explore the shop <span aria-hidden="true">↓</span></a><a class="button ghost" href="#plant-notes">Get a plant note</a></div>
-          <p class="hero-note">A concept inspired by the shop’s reported mix of houseplants, seasonal outdoor plants, and embroidered home and baby goods.</p>
-        </div>
-        <div class="hero-art" role="img" aria-label="Illustration of a potted plant and a stitched gift tag">
-          <div class="sun"></div><div class="hill back"></div><div class="hill"></div><div class="stem"></div><i class="leaf l1"></i><i class="leaf l2"></i><i class="leaf l3"></i><i class="leaf l4"></i><i class="leaf l5"></i><div class="pot"><div class="soil"></div></div>
-          <span class="spark a">✳</span><span class="spark b">✳</span><div class="stitch"><span>made<br>with care</span><small>sample gift tag</small></div><div class="hero-cap">Plant joy, stitched in</div>
-        </div>
-      </section>
-    </main>
-  </div>
-  <div class="ticker">A plant to nurture <span>✳</span> A gift with a personal touch <span>✳</span> A neighborhood shop to explore</div>
-  <section class="section paper" id="discover">
-    <div class="wrap">
-      <div class="section-head"><div><div class="eyebrow">Two kinds of joy</div><h2>Find your next<br>favorite thing.</h2></div><p class="intro">A proposed way to help visitors browse the shop’s two specialties at a glance. Product availability and custom-order options would be confirmed by the owners.</p></div>
-      <div class="offer-grid">
-        <article class="offer plants"><div class="tag">01 · GardNcraft</div><h3>Bring a little green home.</h3><p>Houseplants year-round, plus a changing selection of herbs, perennials, fruit trees, and other outdoor plants in season.</p><a class="textlink" href="#plant-notes">Explore the plant notes <span>↗</span></a><div class="plant-still" aria-hidden="true"><div class="still-stem"></div><i class="still-leaf a"></i><i class="still-leaf b"></i><i class="still-leaf c"></i><div class="still-pot"></div></div></article>
-        <article class="offer stitch"><div class="tag">02 · StitchKraft</div><h3>Give something made by hand.</h3><p>Embroidery adds a warm, personal feel to everyday favorites—from kitchen linens and aprons to baby gifts.</p><a class="textlink" href="#custom-gifts">Explore the gift ideas <span>↗</span></a><div class="stitch-illustration" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none"><path d="M50 78C49 61 47 43 50 20" stroke="#779071" stroke-width="3" stroke-linecap="round"/><path d="M49 57C34 57 26 48 26 37C39 37 48 44 49 57Z" fill="#8FA081" stroke="#55714f" stroke-width="2"/><path d="M50 43C65 42 73 32 72 21C59 22 51 30 50 43Z" fill="#a7b08a" stroke="#55714f" stroke-width="2"/><path d="M50 73C61 72 67 65 68 56C58 56 51 62 50 73Z" fill="#8FA081" stroke="#55714f" stroke-width="2"/><path d="M22 83H78M28 88H72" stroke="#bd7955" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 5"/></svg></div></article>
-      </div>
-    </div>
-  </section>
-  <section class="section" id="plant-notes">
-    <div class="wrap feature-row">
-      <div class="guide-panel">
-        <div class="guide-top"><span>Plant finder · concept</span><b>01 / 02</b></div>
-        <h3>What kind of green friend are you looking for?</h3>
-        <button class="choice" data-answer="A houseplant can brighten your space year-round. Ask the shop which varieties are currently in stock and how much light they prefer."><span class="dot">A</span><span>Something for indoors<small>Easy to enjoy throughout the year</small></span></button>
-        <button class="choice" data-answer="Seasonal outdoor plants can change through the year. Ask the shop what is growing well locally right now and what suits your sun exposure."><span class="dot">B</span><span>Something for the garden<small>Herbs, perennials, or a fruit tree</small></span></button>
-        <div class="answer" aria-live="polite"></div>
-      </div>
-      <div class="feature-copy"><div class="eyebrow">A little help for your plants</div><h2>Care tips that start a conversation.</h2><p>Visitors often have the same questions: How much light? How often to water? Which plants suit my space? A short guide can help them get started—and invite them to ask the shop about a specific plant they’re considering.</p><div class="care-cards"><article class="care-card"><span class="icon" aria-hidden="true">☼</span><h4>Find the light</h4><p>Notice whether a spot gets gentle indirect light or strong direct sun before choosing a plant.</p></article><article class="care-card"><span class="icon" aria-hidden="true">◌</span><h4>Check before watering</h4><p>Touch the soil first. Different plants and pots dry at different rates.</p></article><article class="care-card"><span class="icon" aria-hidden="true">⌂</span><h4>Match your space</h4><p>Share the room, light, and space you have when asking for a recommendation.</p></article></div><p style="font-size:10px;margin:12px 0 0">General starter tips only; care needs vary by plant. Owner-approved guidance can be added.</p></div>
-    </div>
-  </section>
-  <section class="seasonal" id="custom-gifts">
-    <div class="wrap seasonal-grid"><div><div class="eyebrow">The seasonal shelf · concept</div><h2>Small moments,<br>thoughtful gifts.</h2><p>A rotating gift guide could make it easier to find something for a new home, a new baby, a favorite cook, or a plant-loving friend. This is a sample feature; featured items and custom embroidery availability need owner approval.</p><a class="button" href="#community" style="background:#e0bd7c;color:#263b2e">See the gift guide idea <span>↗</span></a></div><div class="seasons"><div class="season-card"><b>For the plant person</b><span>A green gift to grow into</span></div><div class="season-card"><b>For the home cook</b><span>A handmade kitchen detail</span></div><div class="season-card"><b>For a little one</b><span>A sweet keepsake idea</span></div><div class="season-card"><b>Just because</b><span>A small, personal surprise</span></div></div></div>
-  </section>
-  <section class="section paper" id="community">
-    <div class="wrap"><div class="section-head"><div><div class="eyebrow">More than a quick stop</div><h2>Make room for<br>neighbors to connect.</h2></div><p class="intro">These are optional concepts to discuss with the owners—not events or services currently advertised by the shop.</p></div><div class="community"><article class="community-card"><div class="num">Idea 01</div><h3>Plant-care mini sessions</h3><p>A small seasonal workshop could help new plant owners learn the basics and get to know the shop. Dates, capacity, and participation would be set by the owners.</p></article><article class="community-card"><div class="num">Idea 02</div><h3>Meet the makers</h3><p>A maker spotlight could introduce the story behind embroidered pieces and other handmade finds, with owner-approved photos and details.</p></article></div></div>
-  </section>
-  <section class="visit" id="visit">
-    <div class="wrap visit-grid"><div><div class="eyebrow">Come say hello</div><h2>A Long Beach shop<br>with its own kind of charm.</h2><p>The shop’s reported address is below. Please confirm current hours and availability directly before visiting; they aren’t included here because I couldn’t verify them.</p><a class="button" href="https://maps.google.com/?q=528+Klondyke+Road+Suite+G+Long+Beach" target="_blank" rel="noopener">View map directions <span aria-hidden="true">↗</span></a></div><div class="address"><div class="label">Reported storefront address</div><strong>528 Klondyke Road, Suite G</strong><p>Long Beach, California</p><a class="textlink" href="https://maps.google.com/?q=528+Klondyke+Road+Suite+G+Long+Beach" target="_blank" rel="noopener">Open in Maps ↗</a><small>Address reported in a September 2026 local article. Verify current details with the business.</small></div></div>
-  </section>
-  <footer><div class="wrap footer"><span>GardNcraft & StitchKraft · unofficial website concept</span><div class="footer-links"><a href="#home">Back to top ↑</a><span>Sample content and proposed features require owner review.</span></div></div></footer>
-  <script>
-    document.querySelectorAll('.choice').forEach((button)=>button.addEventListener('click',()=>{const answer=document.querySelector('.answer');answer.textContent=button.dataset.answer;answer.classList.add('visible')}));
-  </script>
-</body>
-</html>
+CONCEPT PREVIEW · UNOFFICIAL DEMO — DETAILS FOR OWNER REVIEW
+G
+GardNcraft & StitchKraft
+PLANTS · HANDMADE · HOME
+Discover
+Plant notes
+Community
+Find the shop
+↗
+A LITTLE GREEN, A LITTLE HANDMADE
+Grow something. Give something made with care.
+Meet a Mississippi Gulf Coast plant and embroidery shop where leafy finds and thoughtful stitched gifts share a sunny little corner.
+Explore the shop
+↓
+Get a plant note
+A concept inspired by the shop’s public description of houseplants, Gulf Coast perennials and evergreens, embroidery, gifts, and custom orders.
+
+
+
+
+
+
+
+
+
+
+✳
+✳
+made
+with care
+SAMPLE GIFT TAG
+PLANT JOY, STITCHED IN
+A plant to nurture ✳ A gift with a personal touch ✳ A neighborhood shop to explore
+TWO KINDS OF JOY
+Find your next favorite thing.
+A proposed way to help visitors browse the shop’s two specialties at a glance. Product availability and custom-order options would be confirmed by the owners.
+01 · GARDNCRAFT
+Bring a little green home.
+Houseplants, perennial and evergreen trees and shrubs selected to thrive along the Mississippi Gulf Coast.
+Explore the plant notes
+↗
+
+
+
+
+
+02 · STITCHKRAFT
+Give something made by hand.
+Embroidery adds a warm, personal feel to everyday favorites—from kitchen linens and aprons to baby gifts.
+Explore the gift ideas
+↗
+
+Fresh from the feed
+Microgreens were featured in a recent GardNcraft Facebook post. Ask about current availability.
+See their updates ↗
+PLANT FINDER · CONCEPT
+01 / 02
+What kind of green friend are you looking for?
+A
+Something for indoors
+Easy to enjoy throughout the year
+B
+Something for the garden
+Herbs, perennials, or a fruit tree
+A LITTLE HELP FOR YOUR PLANTS
+Care tips that start a conversation.
+Visitors often have the same questions: How much light? How often to water? Which plants suit my space? A short guide can help them get started—and invite them to ask the shop about a specific plant they’re considering.
+☼
+Find the light
+Notice whether a spot gets gentle indirect light or strong direct sun before choosing a plant.
+◌
+Check before watering
+Touch the soil first. Different plants and pots dry at different rates.
+⌂
+Match your space
+Share the room, light, and space you have when asking for a recommendation.
+General starter tips only; care needs vary by plant. Owner-approved guidance can be added.
+THE SEASONAL SHELF · CONCEPT
+Small moments, thoughtful gifts.
+A rotating gift guide could make it easier to find something for a new home, a new baby, a favorite cook, or a plant-loving friend. This is a sample feature; featured items and custom embroidery availability need owner approval.
+See the gift guide idea
+↗
+For the plant person
+A green gift to grow into
+For the home cook
+A handmade kitchen detail
+For a little one
+A sweet keepsake idea
+Just because
+A small, personal surprise
+MORE THAN A QUICK STOP
+Make room for neighbors to connect.
+These are optional concepts to discuss with the owners—not events or services currently advertised by the shop.
+Idea 01
+Plant-care mini sessions
+A small seasonal workshop could help new plant owners learn the basics and get to know the shop. Dates, capacity, and participation would be set by the owners.
+Idea 02
+Meet the makers
+A maker spotlight could introduce the story behind embroidered pieces and other handmade finds, with owner-approved photos and details.
+COME SAY HELLO
+A Long Beach shop rooted in the Gulf Coast.
+Find plants, embroidery, gifts, and custom orders at the shop. Confirm current hours and product availability before visiting.
+View map directions
+↗
+LONG BEACH, MISSISSIPPI
+528 Klondyke Road
+Long Beach, MS
+Email the shop ↗
+Call the shop ↗
+Contact and address shown on the GardNcraft Facebook page. Confirm current details with the business.
+GardNcraft & StitchKraft · unofficial website concept
+Facebook ↗
+Back to top ↑
+Sample content and proposed features require owner review.
